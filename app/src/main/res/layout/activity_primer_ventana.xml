@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="primeraApp.PrimerVentana">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Escribe aquí"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnADD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnADD"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Botón"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <!-- Aplicando el estilo a la lista de texto -->
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/e_spinner"
+        android:popupTheme="@style/SpinnerStyle"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLista"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="Valor de Lista"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
