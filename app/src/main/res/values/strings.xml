@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PrimeraAPP</string>
+    <string name="escribe_aqu">Escribe aquí</string>
+    <string name="valor_de_lista">Valor de Lista</string>
+    <string name="bot_n">Botón</string>
+    <string name="ingresa_tu_nombre">ingresa_tu_nombre</string>
 </resources>

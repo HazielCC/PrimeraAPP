@@ -7,62 +7,50 @@
     android:background="@color/background"
     tools:context="primeraApp.PrimerVentana">
 
-    <androidx.appcompat.widget.AppCompatEditText
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/appCompatEditText"
         android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="12dp"
-        android:hint="Escribe aquí"
+        style="@style/TextField"
+        android:layout_height="50dp"
         android:inputType="text"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
+        android:hint="@string/ingresa_tu_nombre"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnADD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnADD"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="Botón"
-        android:textColor="@color/white"
+        style="@style/ButtonStyleLila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        android:text="@string/bot_n"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Aplicando el estilo a la lista de texto -->
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/e_spinner"
-        android:popupTheme="@style/SpinnerStyle"
-        android:spinnerMode="dialog"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatEditText"
+        style="@style/SpinnerStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLista"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewLista"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        style="@style/TextField"
         android:layout_marginBottom="15dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:hint="Valor de Lista"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/appCompatEditText"
         app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/valor_de_lista"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

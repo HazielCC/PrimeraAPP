@@ -40,12 +40,13 @@ android {
 }
 
 dependencies {
+    // Dependencias de Kotlin
     implementation(libs.material.spinner)
-
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
+    // Dependencias de Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

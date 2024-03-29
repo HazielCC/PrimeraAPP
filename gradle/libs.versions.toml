@@ -18,5 +18,4 @@ appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat"
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 material-spinner = { module = "com.jaredrummler:material-spinner", version.ref = "materialSpinner" }
 
-
 [plugins]

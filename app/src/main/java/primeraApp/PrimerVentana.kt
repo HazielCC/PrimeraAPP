@@ -17,13 +17,11 @@ class PrimerVentana : AppCompatActivity() {
         binding = ActivityPrimerVentanaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        listeners()
+        setupListeners()
     }
 
 
-    private fun listeners() {
-
-        /*initState()*/
+    private fun setupListeners() {
         val editText = binding.appCompatEditText // Se declara el binding para el EditText
         val spinner = binding.spinner // Se declara el binding para el Spinner
         val textViewLista = binding.textViewLista // Se declara el binding para el TextView
@@ -34,16 +32,15 @@ class PrimerVentana : AppCompatActivity() {
         spinner.adapter = adapter
 
         binding.btnADD.setOnClickListener {
-            if (binding.appCompatEditText.text.toString().isNotEmpty()) {
-                // Añadir el texto ingresado a la lista y notificar al adaptador
-                listItems.add(editText.text.toString())
+            val inputText = editText.text.toString()
+            if (inputText.isNotEmpty()) {
+                listItems.add(inputText)
                 adapter.notifyDataSetChanged()
-                Log.i("Log", "botón: ${editText.text.toString()}")
+                Log.i("Log", "Botón hecho clic: $inputText")
             } else {
-                Log.i("Log", "El campo de Texto Está vacio")
+                Log.i("Log", "El campo de texto está vacío")
             }
         }
-
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -56,10 +53,8 @@ class PrimerVentana : AppCompatActivity() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
-                Log.i("Log", "No se seleccionó nada")
+                Log.i("Log", "Nada seleccionado")
             }
         }
     }
-
-
 }

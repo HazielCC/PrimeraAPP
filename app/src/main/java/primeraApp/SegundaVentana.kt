@@ -18,6 +18,8 @@ class SegundaVentana : AppCompatActivity() {
     }
 
     // Función para inicializar el estado de la segunda ventana
+    private fun initState() {
+    }
 
     // Función para el botón de la primera ventana
     private fun primerVentana() {
