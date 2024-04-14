@@ -13,5 +13,6 @@
     <color name="background">#1e1f22</color>
     <color name="btn">#6200EE</color>
     <color name="btnClick">#7C3BE1</color>
+    <color name="cardDark">#271C3C</color>
 
 </resources>

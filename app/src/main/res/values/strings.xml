@@ -4,4 +4,7 @@
     <string name="valor_de_lista">Valor de Lista</string>
     <string name="bot_n">Botón</string>
     <string name="ingresa_tu_nombre">ingresa_tu_nombre</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="ic_no_masculino">Icóno Masculino</string>
 </resources>
