@@ -8,11 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
     <!-- Color de fondo de la ventana -->
+    <color name="transparent">#00FFFFFF</color>
     <color name="background">#1e1f22</color>
     <color name="btn">#6200EE</color>
     <color name="btnClick">#7C3BE1</color>
     <color name="cardDark">#271C3C</color>
+
+    <!-- Colores para los estados de peso -->
+    <color name="peso_insuficiente">#FFBB86FC</color> <!-- Púrpura Peso Insuficiente -->
+    <color name="peso_saludable">#FF03DAC5</color> <!-- Verde azulado para Peso Saludable -->
+    <color name="exceso_peso">#FFFFA500</color> <!-- Naranja para Exceso de Peso -->
+    <color name="estado_obesidad">#FFFF0000</color> <!-- Rojo para Estado de Obesidad -->
 
 </resources>

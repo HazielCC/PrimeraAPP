@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.primeraapp.databinding.ActivityPrimerVentanaBinding
+import com.coco.primeraapp.databinding.ActivityPrimerVentanaBinding
 
 class PrimerVentana : AppCompatActivity() {
     // Se declara blinding para los elementos de la vista
@@ -16,7 +16,6 @@ class PrimerVentana : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPrimerVentanaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setupListeners()
     }
 

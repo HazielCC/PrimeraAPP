@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="primeraApp.SegundaVentana">
+    tools:context="primeraApp.MenuPrincipal">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnPrimerVentana"
+            android:id="@+id/btnPrimerApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="Primera Ventana"
@@ -23,13 +23,20 @@
             tools:ignore="HardcodedText" />
 
         <Button
-            android:id="@+id/btnIMCVentana"
+            android:id="@+id/btnIMCApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="IMC APP"
+            android:text="@string/imc_app"
             android:textColor="@color/white"
-            app:backgroundTint="@color/btn"
-            tools:ignore="HardcodedText" />
+            app:backgroundTint="@color/btn" />
+
+        <Button
+            android:id="@+id/btnToDoApp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/todo_app"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/btn" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

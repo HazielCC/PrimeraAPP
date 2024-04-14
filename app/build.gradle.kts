@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.primeraapp"
+    namespace = "com.coco.primeraapp"
     compileSdk = 34
 
     defaultConfig {
@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
+    implementation(libs.activity)
     // Dependencias de Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

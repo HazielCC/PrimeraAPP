@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.primeraapp.R
+import com.coco.primeraapp.R
 import imcCaltulator.ImcCaltulatorActivity
 
-class SegundaVentana : AppCompatActivity() {
+class MenuPrincipal : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,7 @@ class SegundaVentana : AppCompatActivity() {
 
     // Función para el botón de la primera ventana
     private fun primerVentana() {
-        val btnPrimerVentana = findViewById<Button>(R.id.btnPrimerVentana)
+        val btnPrimerVentana = findViewById<Button>(R.id.btnPrimerApp)
         btnPrimerVentana.setOnClickListener {
             val intent = Intent(this, PrimerVentana::class.java)
             startActivity(intent)
@@ -32,7 +32,7 @@ class SegundaVentana : AppCompatActivity() {
 
     // Función para el botón de la segunda ventana
     private fun segundaVentana() {
-        val btnIMCVentana = findViewById<Button>(R.id.btnIMCVentana)
+        val btnIMCVentana = findViewById<Button>(R.id.btnIMCApp)
         btnIMCVentana.setOnClickListener {
             val intent = Intent(this, ImcCaltulatorActivity::class.java)
             startActivity(intent)

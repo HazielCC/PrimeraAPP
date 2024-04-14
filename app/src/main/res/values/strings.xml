@@ -7,4 +7,21 @@
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
     <string name="ic_no_masculino">Icóno Masculino</string>
+    <string name="calculos_masa_corporal">Calculos Masa Corporal</string>
+    <string name="resultado">Resultado</string>
+    <string name="volver_a_calcular">Volver a Calcular</string>
+    <string name="error">error</string>
+    <!-- Activity ResultActivity  -->
+    <string name="titulo_bajo_peso">Peso Insuficiente</string>
+    <string name="estatus_bajo_peso">Tu peso está por debajo del rango ideal para tu salud.</string>
+    <string name="titulo_nomal_peso">Peso Saludable</string>
+    <string name="estatus_nomal_peso">Tu peso se encuentra dentro del rango ideal para tu salud.</string>
+    <string name="titulo_sobrepeso">Exceso de Peso</string>
+    <string name="estatus_sobrepeso">Tu peso está por encima del rango ideal para tu salud.</string>
+    <string name="titulo_obesidad">Estado de Obesidad</string>
+    <string name="estatus_obesidad">Estás en un estado de obesidad, lo cual puede afectar tu salud.</string>
+    <string name="todo_app">TODO App</string>
+    <string name="imc_app">IMC App</string>
+
+
 </resources>

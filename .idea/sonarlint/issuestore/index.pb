@@ -216,3 +216,9 @@ w
 G.idea/sonarlint/issuestore/4/9/496a238a6afa168dbaf6efd37bb459331589579c,6\e\6e9644ddf83ab52f39902ecdbfdf4118285ac40c
 Å
 Q.idea/sonarlint/securityhotspotstore/4/9/496a238a6afa168dbaf6efd37bb459331589579c,b\0\b0bb0a26d88d16d2e82502fe47e034e248a527a2
+d
+4app/src/main/java/imcCaltulator/ResultIMCActivity.kt,4\8\4829f17b3eaa6d28080582372d823d95875140e8
+a
+1app/src/main/java/imcCaltulator/ResultActivity.kt,d\1\d1d962f2251faa5b78c7c1cc4facd19904997c2b
+]
+-app/src/main/java/primeraApp/MenuPrincipal.kt,0\3\032f3609acf29057e9bf80857f89e8bc21ad5432
