@@ -14,7 +14,7 @@ class MenuPrincipal : AppCompatActivity() {
         setContentView(R.layout.activity_segunda_ventana)
         initState()
         primerVentana()
-        segundaVentana()
+        imcApp()
     }
 
     // Función para inicializar el estado de la segunda ventana
@@ -31,7 +31,7 @@ class MenuPrincipal : AppCompatActivity() {
     }
 
     // Función para el botón de la segunda ventana
-    private fun segundaVentana() {
+    private fun imcApp() {
         val btnIMCVentana = findViewById<Button>(R.id.btnIMCApp)
         btnIMCVentana.setOnClickListener {
             val intent = Intent(this, ImcCaltulatorActivity::class.java)
