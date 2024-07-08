@@ -38,5 +38,12 @@
             android:textColor="@color/white"
             app:backgroundTint="@color/btn" />
 
+        <Button
+            android:id="@+id/btnFotosApp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/fotos_app"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/btn" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

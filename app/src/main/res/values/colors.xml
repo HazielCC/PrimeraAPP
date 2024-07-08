@@ -21,4 +21,16 @@
     <color name="exceso_peso">#FFFFA500</color> <!-- Naranja para Exceso de Peso -->
     <color name="estado_obesidad">#FFFF0000</color> <!-- Rojo para Estado de Obesidad -->
 
+    <!-- Todo APP -->
+    <color name="background_todo_app">#FF009774</color>
+    <color name="verde_bosque">#388E3C</color>
+    <color name="azul_verde">#00796B</color>
+    <color name="azul_celeste">#0288D1</color>
+    <color name="colorPrimary">#1976D2</color>
+    <color name="trabajo">#455A64</color>
+    <color name="ocio">#FFEB3B</color>
+    <color name="pasatiempo">#8E24AA</color>
+    <color name="juegos">#FF5722</color>
+    <color name="amistades">#4CAF50</color>
+
 </resources>

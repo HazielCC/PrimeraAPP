@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">PrimeraAPP</string>
     <string name="escribe_aqu">Escribe aquí</string>
     <string name="valor_de_lista">Valor de Lista</string>
@@ -11,6 +12,8 @@
     <string name="resultado">Resultado</string>
     <string name="volver_a_calcular">Volver a Calcular</string>
     <string name="error">error</string>
+    <string name="save">Guardar</string>
+
     <!-- Activity ResultActivity  -->
     <string name="titulo_bajo_peso">Peso Insuficiente</string>
     <string name="estatus_bajo_peso">Tu peso está por debajo del rango ideal para tu salud.</string>
@@ -21,7 +24,17 @@
     <string name="titulo_obesidad">Estado de Obesidad</string>
     <string name="estatus_obesidad">Estás en un estado de obesidad, lo cual puede afectar tu salud.</string>
     <string name="todo_app">TODO App</string>
+    <string name="fotos_app">Fotos App</string>
     <string name="imc_app">IMC App</string>
 
+    <!-- Todo Activity  -->
+    <string name="todo_ejemplo">Ejemplo de TODO App</string>
+    <string name="todo_titulo">hola haziel</string>
+    <string name="todo_categoria">categorias</string>
+    <string name="todo_tareas">tareas</string>
+    <string name="todo_add_tarea">Añade una tarea</string>
+    <string name="todo_personal">Personal</string>
+    <string name="todo_negocios">Negocios</string>
+    <string name="todo_otros">Otros</string>
 
 </resources>
