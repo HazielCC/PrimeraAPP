@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="primeraApp.MenuPrincipal">
+    tools:context="androidearly.primeraApp.MenuPrincipal">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,11 +39,36 @@
             app:backgroundTint="@color/btn" />
 
         <Button
+            android:id="@+id/btnHeroApp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/hero_app"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/btn" />
+
+        <Button
             android:id="@+id/btnFotosApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="@string/fotos_app"
             android:textColor="@color/white"
+            app:backgroundTint="@color/btn" />
+
+        <Button
+            android:id="@+id/btnAjustesApp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/ajustes"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/btn" />
+
+        <Button
+            android:id="@+id/btnImprimir"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/imprimir"
+            android:textColor="@color/white"
+            android:visibility="gone"
             app:backgroundTint="@color/btn" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

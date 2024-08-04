@@ -1,13 +1,13 @@
-package fotosApp
+package androidearly.primeraApp.fotosApp
 
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidearly.primeraApp.fotosApp.vml.PictureClass
 import androidx.recyclerview.widget.RecyclerView
 import com.coco.primeraapp.R
-import fotosApp.vml.PictureClass
 
 
 class CameraAdapter(

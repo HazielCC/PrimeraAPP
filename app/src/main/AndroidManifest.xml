@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <!--Permisos de Camara -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- Permiso para leer imágenes de MediaStore -->
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-
+    <!-- - - - - - - - - -  Permisos sin necesidad de autorización  - - - - - - - - - -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- - - - - - - - - - Permisos que necesitas Autorización - - - - - - - - -->
+    <!-- Permisos de Camara -->
     <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-feature android:name="android.hardware.camera.flash" />
 
@@ -23,6 +23,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeraAPP"
         tools:targetApi="31">
+        <activity
+            android:name="androidearly.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="androidearly.heroApp.DetailSuperHeroActivity"
+            android:exported="false" />
+        <activity
+            android:name="androidearly.heroApp.SuperHeroListActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -34,40 +43,40 @@
                 android:resource="@xml/provider_paths" /> <!-- Cambia el nombre del archivo XML según el que hayas creado -->
         </provider>
 
-
         <activity
-            android:name="fotosApp.FotosActivity"
+            android:name="androidearly.primeraApp.fotosApp.FotosActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
-            android:name="todoApp.TodoActivity"
+            android:name="androidearly.primeraApp.todoApp.TodoActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.TODOAPP"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
-            android:name="imcCaltulator.ResultActivity"
+            android:name="androidearly.primeraApp.imcCaltulator.ResultActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
-            android:name="imcCaltulator.ImcCaltulatorActivity"
+            android:name="androidearly.primeraApp.imcCaltulator.ImcCaltulatorActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
-            android:name="primeraApp.MenuPrincipal"
+            android:name="androidearly.primeraApp.MenuPrincipal"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="primeraApp.PrimerVentana"
+            android:name="androidearly.primeraApp.PrimerVentana"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />

@@ -1,4 +1,4 @@
-package fotosApp.vml
+package androidearly.primeraApp.fotosApp.vml
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

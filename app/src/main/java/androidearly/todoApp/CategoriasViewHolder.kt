@@ -1,4 +1,4 @@
-package todoApp
+package androidearly.primeraApp.todoApp
 
 import android.view.View
 import android.widget.TextView

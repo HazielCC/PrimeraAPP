@@ -25,6 +25,8 @@
     <string name="estatus_obesidad">Estás en un estado de obesidad, lo cual puede afectar tu salud.</string>
     <string name="todo_app">TODO App</string>
     <string name="fotos_app">Fotos App</string>
+    <string name="imprimir">Imprimir</string>
+    <string name="hero_app">Hero App</string>
     <string name="imc_app">IMC App</string>
 
     <!-- Todo Activity  -->
@@ -36,5 +38,7 @@
     <string name="todo_personal">Personal</string>
     <string name="todo_negocios">Negocios</string>
     <string name="todo_otros">Otros</string>
+    <string name="combate">Combate</string>
+    <string name="ajustes">Ajustes</string>
 
 </resources>

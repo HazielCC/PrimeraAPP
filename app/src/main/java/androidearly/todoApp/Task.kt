@@ -1,4 +1,4 @@
-package todoApp
+package androidearly.primeraApp.todoApp
 
 data class Task(
     val name: String,

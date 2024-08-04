@@ -8,7 +8,7 @@
     android:background="@color/background"
     android:paddingHorizontal="16dp"
     android:paddingVertical="30dp"
-    tools:context="imcCaltulator.ResultActivity">
+    tools:context="androidearly.primeraApp.imcCaltulator.ResultActivity">
     <!-- Titulo  -->
     <TextView
         android:id="@+id/tvTitulo"

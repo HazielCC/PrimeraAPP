@@ -1,4 +1,4 @@
-package primeraApp
+package androidearly.primeraApp
 
 import android.os.Bundle
 import android.util.Log

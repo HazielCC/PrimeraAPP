@@ -1,4 +1,4 @@
-package todoApp
+package androidearly.primeraApp.todoApp
 
 import android.content.res.ColorStateList
 import android.view.View

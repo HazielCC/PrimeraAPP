@@ -33,4 +33,16 @@
     <color name="juegos">#FF5722</color>
     <color name="amistades">#4CAF50</color>
 
+    <!-- Colores para los Super Heroes -->
+    <color name="colorSuperHeroeMarvel">#FFD00000</color>
+    <color name="colorSuperHeroeDC">#FF0000D0</color>
+
+    <!-- Tipos de poderes-->
+    <color name="colorCombat">#FF4500</color> <!-- Naranja Rojo -->
+    <color name="colorDurability">#32CD32</color> <!-- Verde Lima -->
+    <color name="colorIntelligence">#1E90FF</color> <!-- Azul Dodger -->
+    <color name="colorPower">#FFD700</color> <!-- Oro -->
+    <color name="colorSpeed">#FF69B4</color> <!-- Rosa Caliente -->
+    <color name="colorStrength">#8B0000</color> <!-- Rojo Oscuro -->
+
 </resources>

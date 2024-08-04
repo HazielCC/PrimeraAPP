@@ -1,4 +1,4 @@
-package imcCaltulator
+package androidearly.primeraApp.imcCaltulator
 
 import android.annotation.SuppressLint
 import android.content.Intent

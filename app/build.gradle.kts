@@ -12,7 +12,7 @@ android {
         minSdk = 27
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,16 +30,19 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     // ViewBinding enabled for this module
     buildFeatures {
         viewBinding = true
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 dependencies {
+    /* Una dependencia */
     // Dependencias de Kotlin
     implementation(libs.material.spinner)
     implementation(libs.core.ktx)
@@ -47,8 +50,17 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.activity)
+
+    // Consumo de servicios
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
     // Dependencias de Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Imagenes
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 }

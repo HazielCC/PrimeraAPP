@@ -1,10 +1,13 @@
-package todoApp
+package androidearly.primeraApp.todoApp
 
 import android.app.Dialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
+import androidearly.primeraApp.todoApp.TaskCategory.Business
+import androidearly.primeraApp.todoApp.TaskCategory.Other
+import androidearly.primeraApp.todoApp.TaskCategory.Personal
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,9 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.coco.primeraapp.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import todoApp.TaskCategory.Business
-import todoApp.TaskCategory.Other
-import todoApp.TaskCategory.Personal
 
 class TodoActivity : AppCompatActivity() {
     //#Region Variables

@@ -1,4 +1,4 @@
-package fotosApp
+package androidearly.primeraApp.fotosApp
 
 import android.Manifest
 import android.content.Intent
@@ -16,6 +16,8 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import androidearly.primeraApp.fotosApp.vml.CameraViewModel
+import androidearly.primeraApp.fotosApp.vml.PictureClass
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -28,8 +30,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.coco.primeraapp.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import fotosApp.vml.CameraViewModel
-import fotosApp.vml.PictureClass
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
