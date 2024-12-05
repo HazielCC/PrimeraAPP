@@ -8,11 +8,25 @@
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
     <string name="ic_no_masculino">Icóno Masculino</string>
-    <string name="calculos_masa_corporal">Calculos Masa Corporal</string>
+    <string name="calcular_masa_corporal">Calcular Masa Corporal</string>
     <string name="resultado">Resultado</string>
     <string name="volver_a_calcular">Volver a Calcular</string>
     <string name="error">error</string>
     <string name="save">Guardar</string>
+
+    <!-- ****************** IMC APP ****************** -->
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="edad">Edad</string>
+    <string name="_120_cm">120 cm</string>
+    <string name="_35_kg">35 kg</string>
+    <string name="_23_a_os">23 Años</string>
+
+    <!--ALTS  -->
+    <string name="menos_peso">Menos peso</string>
+    <string name="aumentar_edad">Aumentar edad</string>
+    <string name="disminuir_edad">Disminuir edad</string>
+    <string name="aumentar_peso">Aumentar peso</string>
 
     <!-- Activity ResultActivity  -->
     <string name="titulo_bajo_peso">Peso Insuficiente</string>
@@ -45,5 +59,6 @@
     <string name="modo_oscuro">Modo Oscuro</string>
     <string name="habilita_el_modo_oscuro">Habilita el modo oscuro</string>
     <string name="vibracion">Vibración</string>
+
 
 </resources>

@@ -32,15 +32,8 @@ class ImcCaltulatorActivity : AppCompatActivity() {
         binding = ActivityImcCaltulatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initComponets()
         initUI()
         setListeners()
-    }
-
-
-    // Inicialización de Variables
-    private fun initComponets() {
-
     }
 
     private fun initUI() {
@@ -53,7 +46,6 @@ class ImcCaltulatorActivity : AppCompatActivity() {
         result = peso / (altura.toDouble() / 100 * altura.toDouble() / 100)
         Log.d(tag, "El Resultado es $result")
         return result
-
     }
 
     // Inicialización de Variables

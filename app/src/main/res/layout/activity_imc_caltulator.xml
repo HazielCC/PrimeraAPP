@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="30dp"
+    android:paddingVertical="15dp"
     tools:context="androidearly.primeraApp.imcCaltulator.ImcCaltulatorActivity">
 
     <!-- tarjeta de Hombre  -->
@@ -100,7 +100,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Altura"
+                android:text="@string/altura"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -108,7 +108,7 @@
                 android:id="@+id/tvAltura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120 cm"
+                android:text="@string/_120_cm"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -147,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Peso"
+                android:text="@string/peso"
                 android:textAllCaps="true"
                 android:textColor="@color/white" />
 
@@ -155,7 +155,7 @@
                 android:id="@+id/tvPeso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="35 kg"
+                android:text="@string/_35_kg"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -170,20 +170,24 @@
 
                 <ImageButton
                     android:id="@+id/ibMenos"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginEnd="16dp"
-                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+
+                    android:contentDescription="@string/menos_peso"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_menos"
                     app:tint="@color/white" />
 
                 <ImageButton
                     android:id="@+id/ibMas"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:background="@android:color/transparent"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/aumentar_peso"
                     android:scaleType="fitCenter"
+                    android:backgroundTint="@android:color/transparent"
+
                     android:src="@drawable/ic_mas"
                     app:tint="@color/white" />
 
@@ -215,7 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Edad"
+                android:text="@string/edad"
                 android:textAllCaps="true"
                 android:textColor="@color/white" />
 
@@ -223,7 +227,7 @@
                 android:id="@+id/tvEdad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23 Años"
+                android:text="@string/_23_a_os"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -235,13 +239,13 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-
                 <ImageButton
                     android:id="@+id/ibMenosEdad"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginEnd="16dp"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@string/disminuir_edad"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_menos"
                     app:tint="@color/white" />
@@ -251,11 +255,10 @@
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@string/aumentar_edad"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mas"
                     app:tint="@color/white" />
-
-
             </LinearLayout>
 
         </LinearLayout>
@@ -264,14 +267,15 @@
     <!-- Botón de calculas -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btCalcular"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:padding="16dp"
-        android:text="@string/calculos_masa_corporal"
+
+        style="@style/MyButtonStyle"
+
+        android:text="@string/calcular_masa_corporal"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvPeso" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
