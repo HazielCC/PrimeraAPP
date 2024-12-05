@@ -1,9 +1,9 @@
-package androidearly.settings
+package androidearly.ui.settings
 
 import android.os.Bundle
 import android.util.Log
-import androidearly.core.Settings
-import androidearly.core.dataStore
+import androidearly.ui.settings.model.Settings
+import androidearly.ui.settings.model.dataStore
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate

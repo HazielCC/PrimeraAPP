@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
+    <!-- ***************** Base colors *****************  -->
+    <!-- Daylight -->
+    <color name="colorPrimary">#09a144</color>
+    <color name="colorPrimaryVariant">#6200EE</color>
+    <color name="colorSecundary">#6200EE</color>
+
+    <!-- Nigthly -->
+    <color name="colorPrimaryDark">#09a144</color>
+    <color name="colorPrimaryVariantDark">#6200EE</color>
+    <color name="colorSecundaryDark">#6200EE</color>
+
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -11,6 +20,14 @@
     <!-- Color de fondo de la ventana -->
     <color name="transparent">#00FFFFFF</color>
     <color name="background">#1e1f22</color>
+
+    <!-- Colores para los botones -->
+    <color name="btnDisabled">#737373</color>
+    <color name="btnBlue">#FF009774</color>
+    <color name="btnRed">#FFD00000</color>
+    <color name="btnGreen">#FF388E3C</color>
+    <color name="btnYellow">#FFFFEB3B</color>
+
     <color name="btn">#6200EE</color>
     <color name="btnClick">#7C3BE1</color>
     <color name="cardDark">#271C3C</color>
@@ -26,7 +43,6 @@
     <color name="verde_bosque">#388E3C</color>
     <color name="azul_verde">#00796B</color>
     <color name="azul_celeste">#0288D1</color>
-    <color name="colorPrimary">#1976D2</color>
     <color name="trabajo">#455A64</color>
     <color name="ocio">#FFEB3B</color>
     <color name="pasatiempo">#8E24AA</color>

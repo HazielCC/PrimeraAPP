@@ -1,4 +1,4 @@
-package androidearly.heroApp
+package androidearly.ui.heroApp
 
 import android.os.Bundle
 import android.util.Log

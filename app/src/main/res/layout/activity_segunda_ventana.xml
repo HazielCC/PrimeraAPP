@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="androidearly.primeraApp.MenuPrincipal">
+    tools:context="androidearly.ui.home.MenuPrincipal">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,60 +16,63 @@
 
         <Button
             android:id="@+id/btnPrimerApp"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:text="Primera Ventana"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/btn"
-            tools:ignore="HardcodedText" />
+
+            style="@style/MyButtonStyle"
+            app:backgroundTint="@color/btnBlue"
+            android:visibility="gone"
+
+            android:text="Primera Ventana" />
 
         <Button
             android:id="@+id/btnIMCApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="@string/imc_app"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/btn" />
+
+            style="@style/MyButtonStyle"
+            app:backgroundTint="@color/btnBlue"
+
+            android:text="@string/imc_app" />
 
         <Button
             android:id="@+id/btnToDoApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="@string/todo_app"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/btn" />
+
+            style="@style/MyButtonStyle"
+            app:backgroundTint="@color/btnBlue"
+
+            android:text="@string/todo_app" />
 
         <Button
             android:id="@+id/btnHeroApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="@string/hero_app"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/btn" />
+
+            style="@style/MyButtonStyle"
+            app:backgroundTint="@color/btnBlue"
+
+            android:text="@string/hero_app" />
 
         <Button
             android:id="@+id/btnFotosApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="@string/fotos_app"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/btn" />
+
+            style="@style/MyButtonStyle"
+            app:backgroundTint="@color/btnBlue"
+
+            android:text="@string/fotos_app" />
 
         <Button
             android:id="@+id/btnAjustesApp"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="@string/ajustes"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/btn" />
 
-        <Button
-            android:id="@+id/btnImprimir"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="@string/imprimir"
-            android:textColor="@color/white"
-            android:visibility="gone"
-            app:backgroundTint="@color/btn" />
+            style="@style/MyButtonStyle"
+            app:backgroundTint="@color/btnBlue"
+
+            android:text="@string/ajustes" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

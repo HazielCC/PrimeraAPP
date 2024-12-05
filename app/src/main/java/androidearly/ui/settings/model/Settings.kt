@@ -1,4 +1,4 @@
-package androidearly.core
+package androidearly.ui.settings.model
 
 import android.content.Context
 import androidx.datastore.core.DataStore

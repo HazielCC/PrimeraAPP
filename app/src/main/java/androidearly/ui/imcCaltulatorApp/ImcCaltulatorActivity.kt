@@ -4,30 +4,14 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageButton
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.coco.primeraapp.R
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
-import com.google.android.material.slider.RangeSlider
-import com.google.android.material.textview.MaterialTextView
+import com.coco.primeraapp.databinding.ActivityImcCaltulatorBinding
 import java.text.DecimalFormat
 
 class ImcCaltulatorActivity : AppCompatActivity() {
-    // Función para inicializar los componentes de la actividad
-    private lateinit var maleCard: MaterialCardView
-    private lateinit var famaleCard: MaterialCardView
-    private lateinit var tvAltura: MaterialTextView
-    private lateinit var rsAltura: RangeSlider
-    private lateinit var ibMenos: ImageButton
-    private lateinit var ibMas: ImageButton
-    private lateinit var tvPeso: TextView
-    private lateinit var ibMenosEdad: ImageButton
-    private lateinit var ibMasEdad: ImageButton
-    private lateinit var tvEdad: TextView
-    private lateinit var btCalcular: MaterialButton
+    private lateinit var binding: ActivityImcCaltulatorBinding
 
     // Variables de código
     private var peso = 45
@@ -45,7 +29,9 @@ class ImcCaltulatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_imc_caltulator)
+        binding = ActivityImcCaltulatorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         initComponets()
         initUI()
         setListeners()
@@ -54,18 +40,7 @@ class ImcCaltulatorActivity : AppCompatActivity() {
 
     // Inicialización de Variables
     private fun initComponets() {
-        // Se declaran componentes del Activity
-        famaleCard = findViewById(R.id.FamaleView)
-        maleCard = findViewById(R.id.MaleView)
-        tvAltura = findViewById(R.id.tvAltura)
-        rsAltura = findViewById(R.id.rsAltura)
-        ibMenos = findViewById(R.id.ibMenos)
-        ibMas = findViewById(R.id.ibMas)
-        tvPeso = findViewById(R.id.tvPeso)
-        tvEdad = findViewById(R.id.tvEdad)
-        ibMenosEdad = findViewById(R.id.ibMenosEdad)
-        ibMasEdad = findViewById(R.id.ibMasEdad)
-        btCalcular = findViewById(R.id.btCalcular)
+
     }
 
     private fun initUI() {
@@ -85,50 +60,50 @@ class ImcCaltulatorActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun setListeners() {
         // Botón Mujer que hace referencia a la tarjeta de mujer
-        famaleCard.setOnClickListener {
+        binding.cvFamale.setOnClickListener {
             Log.d(tag, "Famale card clicked")
             changeColor()
             setGernderColor()
         }
 
         // Botón Hombre que hace referencia a la tarjeta de Hombre
-        maleCard.setOnClickListener {
+        binding.cvMale.setOnClickListener {
             Log.d(tag, "Male card clicked")
             changeColor()
             setGernderColor()
         }
 
         // Control deslizante de rango de Altura
-        rsAltura.addOnChangeListener { _, fl, _ ->
+        binding.rsAltura.addOnChangeListener { _, fl, _ ->
             val df = DecimalFormat("#.##")
             altura = df.format(fl).toInt()
-            tvAltura.text = "$altura cm"
+            binding.tvAltura.text = "$altura cm"
         }
 
         // Apartado de Peso
-        //tvPeso.text = peso.toString()
-        ibMenos.setOnClickListener {
+        //binding.tvPeso.text = peso.toString()
+        binding.ibMenos.setOnClickListener {
             peso -= 1
             actualizarPeso()
         }
 
-        ibMas.setOnClickListener {
+        binding.ibMas.setOnClickListener {
             peso += 1
             actualizarPeso()
         }
 
         // Apartado de Edad
-        ibMenosEdad.setOnClickListener {
+        binding.ibMenosEdad.setOnClickListener {
             edad -= 1
             actualizarEdad()
         }
 
-        ibMasEdad.setOnClickListener {
+        binding.ibMasEdad.setOnClickListener {
             edad += 1
             actualizarEdad()
         }
 
-        btCalcular.setOnClickListener {
+        binding.btCalcular.setOnClickListener {
             calcularIMC()
             navigateToResult()
         }
@@ -143,12 +118,12 @@ class ImcCaltulatorActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun actualizarEdad() {
-        tvEdad.text = "$edad años"
+        binding.tvEdad.text = "$edad años"
     }
 
     @SuppressLint("SetTextI18n")
     private fun actualizarPeso() {
-        tvPeso.text = "$peso kg"
+        binding.tvPeso.text = "$peso kg"
     }
 
     private fun changeColor() {
@@ -158,8 +133,8 @@ class ImcCaltulatorActivity : AppCompatActivity() {
 
 
     private fun setGernderColor() {
-        maleCard.setCardBackgroundColor(getBackgroundColor(isMaleSelected))
-        famaleCard.setCardBackgroundColor(getBackgroundColor(isFamaleSelected))
+        binding.cvMale.setCardBackgroundColor(getBackgroundColor(isMaleSelected))
+        binding.cvFamale.setCardBackgroundColor(getBackgroundColor(isFamaleSelected))
     }
 
     private fun getBackgroundColor(isSelectedComponent: Boolean): Int {
@@ -171,4 +146,3 @@ class ImcCaltulatorActivity : AppCompatActivity() {
         return ContextCompat.getColor(this, colorSelected)
     }
 }
-

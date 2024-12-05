@@ -1,4 +1,4 @@
-package androidearly.primeraApp
+package androidearly.ui.home
 
 import android.os.Bundle
 import android.util.Log

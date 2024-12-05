@@ -1,9 +1,9 @@
-package androidearly.heroApp
+package androidearly.ui.heroApp
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidearly.heroApp.DetailSuperHeroActivity.Companion.EXTRA_NAME
+import androidearly.ui.heroApp.DetailSuperHeroActivity.Companion.EXTRA_NAME
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView

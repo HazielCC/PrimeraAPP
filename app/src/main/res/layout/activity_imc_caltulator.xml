@@ -11,13 +11,13 @@
 
     <!-- tarjeta de Hombre  -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/MaleView"
+        android:id="@+id/cvMale"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginEnd="10dp"
         app:cardBackgroundColor="@color/btn"
         app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/FamaleView"
+        app:layout_constraintEnd_toStartOf="@+id/cvFamale"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -46,14 +46,14 @@
 
     <!-- tarjeta de Mujer  -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/FamaleView"
+        android:id="@+id/cvFamale"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_weight="1"
         app:cardBackgroundColor="@color/btnClick"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MaleView"
+        app:layout_constraintStart_toEndOf="@+id/cvMale"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -88,7 +88,7 @@
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MaleView">
+        app:layout_constraintTop_toBottomOf="@+id/cvMale">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"

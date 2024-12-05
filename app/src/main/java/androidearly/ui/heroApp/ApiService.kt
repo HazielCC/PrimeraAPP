@@ -1,4 +1,4 @@
-package androidearly.heroApp
+package androidearly.ui.heroApp
 
 import retrofit2.Response
 import retrofit2.http.GET

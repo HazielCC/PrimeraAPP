@@ -1,4 +1,4 @@
-package androidearly.heroApp
+package androidearly.ui.heroApp
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
