@@ -23,6 +23,5 @@ class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.root.setOnClickListener {
             onItemClicked(superHeroItemResponse.id)
         }
-
     }
 }

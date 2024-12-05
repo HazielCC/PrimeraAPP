@@ -62,10 +62,6 @@ class SuperHeroListActivity : AppCompatActivity() {
         binding.rvSuperHero.setHasFixedSize(true)
         binding.rvSuperHero.layoutManager = LinearLayoutManager(this)
         binding.rvSuperHero.adapter = adapter
-
-
-        // Se ejecuta cuando se selecciona un superhéroe
-
     }
 
     private fun searchByName(query: String) {
@@ -82,7 +78,6 @@ class SuperHeroListActivity : AppCompatActivity() {
                     Log.d(tag, "searchByName: ${service.errorBody()}")
                 }
             }
-
         }
     }
 

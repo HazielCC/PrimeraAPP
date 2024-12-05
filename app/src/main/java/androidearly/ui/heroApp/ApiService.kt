@@ -10,5 +10,4 @@ interface ApiService {
 
     @GET("85eddff613c51a369855c0d31848b3f3/{id}")
     suspend fun getHeroesID(@Path("id") superID: String): Response<SuperHeroDetailResponse>
-
 }
