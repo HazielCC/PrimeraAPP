@@ -63,4 +63,7 @@ dependencies {
     // Imagenes
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
+
+    // Almacenamiento de datos
+    implementation(libs.datastore.preferences)
 }

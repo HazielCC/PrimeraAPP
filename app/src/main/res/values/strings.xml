@@ -41,4 +41,9 @@
     <string name="combate">Combate</string>
     <string name="ajustes">Ajustes</string>
 
+    <!-- Ajustes  Activity -->
+    <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="habilita_el_modo_oscuro">Habilita el modo oscuro</string>
+    <string name="vibracion">Vibración</string>
+
 </resources>

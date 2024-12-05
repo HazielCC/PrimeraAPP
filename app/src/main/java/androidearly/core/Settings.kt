@@ -1,4 +1,4 @@
-package androidearly.provider.utilities
+package androidearly.core
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -7,7 +7,9 @@ import androidx.datastore.preferences.preferencesDataStore
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-
-object Settings {
-
-}
+data class Settings(
+    val volumen: Int,
+    val darkMode: Boolean,
+    val vibration: Boolean,
+    val bluetoothMode: Boolean
+)
