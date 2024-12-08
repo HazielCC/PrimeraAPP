@@ -1,0 +1,4 @@
+package androidearly
+
+class FirstApp {
+}
