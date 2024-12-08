@@ -1,4 +1,4 @@
-package androidearly.ui.heroApp
+package androidearly.ui.heroApp.data
 
 import com.google.gson.annotations.SerializedName
 

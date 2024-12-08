@@ -1,6 +1,7 @@
-package androidearly.ui.heroApp
+package androidearly.ui.heroApp.adapter
 
 import android.view.View
+import androidearly.ui.heroApp.data.SuperHeroItemResponse
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.coco.primeraapp.R

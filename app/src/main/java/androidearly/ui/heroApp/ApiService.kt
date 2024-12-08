@@ -1,5 +1,7 @@
 package androidearly.ui.heroApp
 
+import androidearly.ui.heroApp.data.SuperHeroDataResponse
+import androidearly.ui.heroApp.data.SuperHeroDetailResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

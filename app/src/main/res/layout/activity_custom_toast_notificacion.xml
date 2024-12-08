@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/toast_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="androidearly.utilities.notifications.CustomToastNotificacion">
+    android:background="@android:color/transparent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/button_card_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rlBorderColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Add any other views or elements you want here -->
+            <FrameLayout
+                android:id="@+id/buttonAccentBorder"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="#3EAA56" />
+
+            <TextView
+                android:id="@+id/toast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:padding="10dp"
+                android:textColor="#131313"
+                android:textSize="16sp"
+                tools:text="@string/todo_ejemplo" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

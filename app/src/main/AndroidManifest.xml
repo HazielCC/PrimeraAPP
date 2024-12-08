@@ -10,7 +10,6 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeraAPP"
         tools:targetApi="31">
+        <activity
+            android:name="androidearly.utilities.dialogs.Dialog"
+            android:exported="false" />
+        <activity
+            android:name="androidearly.utilities.notifications.CustomToastNotificacion"
+            android:exported="false" />
         <activity
             android:name="androidearly.ui.settings.SettingsActivity"
             android:exported="false" />

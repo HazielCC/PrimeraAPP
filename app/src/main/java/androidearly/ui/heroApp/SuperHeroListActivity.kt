@@ -2,14 +2,16 @@ package androidearly.ui.heroApp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidearly.ui.heroApp.DetailSuperHeroActivity.Companion.EXTRA_NAME
+import androidearly.ui.heroApp.adapter.SuperHeroAdapter
+import androidearly.utilities.dialogs.LoadingDialog.Companion.dismissLoadingDialog
+import androidearly.utilities.dialogs.LoadingDialog.Companion.showLoadingDialog
+import androidearly.utilities.notifications.showCustomToastNotification
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coco.primeraapp.R
 import com.coco.primeraapp.databinding.ActivitySuperHeroListBinding
@@ -24,6 +26,7 @@ class SuperHeroListActivity : AppCompatActivity() {
     private lateinit var retrofit: Retrofit
     private val tag = "SuperHeroListActivity"
     private lateinit var adapter: SuperHeroAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +53,6 @@ class SuperHeroListActivity : AppCompatActivity() {
         binding.svSuperHeroList.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             // Se ejecuta cuando se presiona el botón de búsqueda
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Log.d(tag, "onQueryTextSubmit: $query")
                 searchByName(query.orEmpty()) // Se ejecuta la búsqueda
                 return false
             }
@@ -65,17 +67,18 @@ class SuperHeroListActivity : AppCompatActivity() {
     }
 
     private fun searchByName(query: String) {
-        binding.pbSuperHeroList.isVisible = true
+        //binding.pbSuperHeroList.isVisible = true
+        showLoadingDialog(this@SuperHeroListActivity)
         CoroutineScope(Dispatchers.IO).launch {
             val service = retrofit.create(ApiService::class.java).getHeroes(query)
             val response = service.body()
             runOnUiThread {
-                binding.pbSuperHeroList.isVisible = false
-                if (service.isSuccessful) {
-                    Log.d(tag, "searchByName: $response")
-                    adapter.updateList(response?.superHeroList ?: emptyList())
+                dismissLoadingDialog(this@SuperHeroListActivity)
+                //binding.pbSuperHeroList.isVisible = false
+                if (response!!.superHeroList.isNotEmpty() && service.isSuccessful) {
+                    adapter.updateList(response.superHeroList)
                 } else {
-                    Log.d(tag, "searchByName: ${service.errorBody()}")
+                    showCustomToastNotification("No se encontró informacion", 3)
                 }
             }
         }

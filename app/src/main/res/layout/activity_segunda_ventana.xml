@@ -20,7 +20,7 @@
             android:layout_height="60dp"
 
             style="@style/MyButtonStyle"
-            app:backgroundTint="@color/btnBlue"
+            app:backgroundTint="@color/blue"
             android:visibility="gone"
 
             android:text="Primera Ventana" />
@@ -31,7 +31,7 @@
             android:layout_height="60dp"
 
             style="@style/MyButtonStyle"
-            app:backgroundTint="@color/btnBlue"
+            app:backgroundTint="@color/blue"
 
             android:text="@string/imc_app" />
 
@@ -41,7 +41,7 @@
             android:layout_height="60dp"
 
             style="@style/MyButtonStyle"
-            app:backgroundTint="@color/btnBlue"
+            app:backgroundTint="@color/blue"
 
             android:text="@string/todo_app" />
 
@@ -51,7 +51,7 @@
             android:layout_height="60dp"
 
             style="@style/MyButtonStyle"
-            app:backgroundTint="@color/btnBlue"
+            app:backgroundTint="@color/blue"
 
             android:text="@string/hero_app" />
 
@@ -61,7 +61,7 @@
             android:layout_height="60dp"
 
             style="@style/MyButtonStyle"
-            app:backgroundTint="@color/btnBlue"
+            app:backgroundTint="@color/blue"
 
             android:text="@string/fotos_app" />
 
@@ -71,7 +71,7 @@
             android:layout_height="60dp"
 
             style="@style/MyButtonStyle"
-            app:backgroundTint="@color/btnBlue"
+            app:backgroundTint="@color/blue"
 
             android:text="@string/ajustes" />
     </LinearLayout>

@@ -1,4 +1,4 @@
-package androidearly.provider.utilities
+package androidearly.utilities.services
 
 import android.content.Context
 import android.net.ConnectivityManager

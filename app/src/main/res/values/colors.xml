@@ -23,10 +23,13 @@
 
     <!-- Colores para los botones -->
     <color name="btnDisabled">#737373</color>
-    <color name="btnBlue">#FF009774</color>
-    <color name="btnRed">#FFD00000</color>
-    <color name="btnGreen">#FF388E3C</color>
+    <color name="blue">#FF009774</color>
+    <color name="red">#FFD00000</color>
+    <color name="redTransparent">#1AD00000</color>
+    <color name="green">#FF388E3C</color>
+    <color name="greenTransparent">#1A09A144</color>
     <color name="btnYellow">#FFFFEB3B</color>
+    <color name="yellowTransparent">#1AFFEB3B</color>
 
     <color name="btn">#6200EE</color>
     <color name="btnClick">#7C3BE1</color>

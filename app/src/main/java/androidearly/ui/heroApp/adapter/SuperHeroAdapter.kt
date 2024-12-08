@@ -1,7 +1,8 @@
-package androidearly.ui.heroApp
+package androidearly.ui.heroApp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidearly.ui.heroApp.data.SuperHeroItemResponse
 import androidx.recyclerview.widget.RecyclerView
 import com.coco.primeraapp.R
 
