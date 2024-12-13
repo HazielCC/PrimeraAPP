@@ -5,6 +5,7 @@ import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import androidearly.ui.heroApp.data.SuperHeroDetailResponse
+import androidearly.utilities.notifications.showCustomToastNotification
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat

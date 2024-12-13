@@ -2,10 +2,10 @@ package androidearly.ui.heroApp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidearly.ui.heroApp.DetailSuperHeroActivity.Companion.EXTRA_NAME
 import androidearly.ui.heroApp.adapter.SuperHeroAdapter
 import androidearly.utilities.dialogs.LoadingDialog
+import androidearly.utilities.dialogs.MessageDialog
 import androidearly.utilities.notifications.showCustomToastNotification
 import androidearly.utilities.services.API.getRetrofit
 import androidx.activity.enableEdgeToEdge
@@ -22,11 +22,13 @@ import retrofit2.Retrofit
 
 class SuperHeroListActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySuperHeroListBinding
-    private lateinit var retrofit: Retrofit
     private val tag = "SuperHeroListActivity"
     private lateinit var adapter: SuperHeroAdapter
 
-    private var loadingDialog = LoadingDialog()
+    // Utilities
+    private lateinit var retrofit: Retrofit
+    private val loadingDialog = LoadingDialog()
+    private val messageDialog = MessageDialog()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,23 +72,24 @@ class SuperHeroListActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 loadingDialog.show(this@SuperHeroListActivity, "Buscando...")
-                if (query.isNotEmpty()) {
-                    val service = retrofit.create(ApiService::class.java).getHeroes(query)
-                    val response = service.body()
-                    loadingDialog.dismiss()
+                val service = retrofit.create(ApiService::class.java).getHeroes(query)
+                val response = service.body()
+                loadingDialog.dismiss()
 
-                    if (response!!.superHeroList.isNotEmpty() && service.isSuccessful) {
-                        adapter.updateList(response.superHeroList)
-                    } else {
-                        showCustomToastNotification("No se encontró informacion", 2)
-                    }
+                if (response!!.superHeroList.isNotEmpty() && service.isSuccessful) {
+                    adapter.updateList(response.superHeroList)
                 } else {
-                    showCustomToastNotification("Ingrese un nombre", 2)
+                    showCustomToastNotification("No se encontró información", 2)
                 }
             } catch (e: Exception) {
                 loadingDialog.dismiss()
-                Log.e(tag, "Error: ${e.message}")
-                showCustomToastNotification("Error al buscar", 2)
+                messageDialog.showCustomMessageWithAction(
+                    context = this@SuperHeroListActivity,
+                    title = "Ocurrió un error",
+                    message = "No se encontró información ${e.message}",
+                ) {
+                    finish()
+                }
             }
         }
     }

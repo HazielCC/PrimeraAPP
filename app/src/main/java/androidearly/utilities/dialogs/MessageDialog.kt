@@ -12,95 +12,94 @@ class MessageDialog {
     private lateinit var binding: ActivityMessageDialogBinding
     private var dialog: AlertDialog? = null
 
+    companion object {
+        const val TYPE_ERROR = "error"
+        const val TYPE_SUCCESS = "success"
+        const val TYPE_INFO = "info"
+        const val TYPE_WARNING = "warning"
+        const val TYPE_ERROR_INTERNET = "error_internet"
+    }
+
     private fun show(context: Context, message: String, type: String) {
-        // Verificar si ya hay un diálogo visible
-        if (dialog?.isShowing == true) {
-            return
-        }
+        if (dialog?.isShowing == true) return
 
         val builder = AlertDialog.Builder(context)
         val inflater = LayoutInflater.from(context)
         binding = ActivityMessageDialogBinding.inflate(inflater)
-        val view = binding.root
-        builder.setView(view)
+        builder.setView(binding.root)
         dialog = builder.create()
-        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent) // Hacer el fondo del diálogo transparente
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog?.show()
 
         binding.tvText.text = message
+        configureDialog(context, type)
+        binding.btnClose.setOnClickListener { dialog?.dismiss() }
+    }
 
+    private fun configureDialog(context: Context, type: String) {
         when (type) {
-            "error" -> {
+            TYPE_ERROR -> {
                 dialog?.setCancelable(false)
                 binding.tvTitle.text = context.getString(R.string.error)
                 binding.tvTitle.setTextColor(context.getColor(R.color.red))
                 binding.ivIcon.setImageResource(R.drawable.ic_error)
             }
 
-            "success" -> {
+            TYPE_SUCCESS -> {
                 binding.tvTitle.text = context.getString(R.string.exito)
                 binding.tvTitle.setTextColor(context.getColor(R.color.green))
                 binding.ivIcon.setImageResource(R.drawable.ic_success)
             }
 
-            "info" -> {
+            TYPE_INFO -> {
                 binding.tvTitle.text = context.getString(R.string.informacion)
                 binding.tvTitle.setTextColor(context.getColor(R.color.blue))
                 binding.ivIcon.setImageResource(R.drawable.ic_information)
             }
 
-            "warning" -> {
+            TYPE_WARNING -> {
                 binding.tvTitle.text = context.getString(R.string.advertencia)
                 binding.tvTitle.setTextColor(context.getColor(R.color.yellow))
                 binding.ivIcon.setImageResource(R.drawable.ic_warning)
             }
 
-            "error_internet" -> {
+            TYPE_ERROR_INTERNET -> {
                 dialog?.setCancelable(false)
-
                 binding.tvTitle.text = context.getString(R.string.error_servicio)
                 binding.tvTitle.setTextColor(context.getColor(R.color.red))
                 binding.ivIcon.setImageResource(R.drawable.ic_error)
-
                 binding.btnClose.visibility = View.GONE
                 binding.btnAction.text = context.getString(R.string.reintentar)
-
                 binding.btnAction.setOnClickListener {
-                    context.isNetworkAvailable().let {
-                        if (it) {
-                            dialog?.dismiss()
-                        } else {
-                            dialog?.dismiss()
-                            show(
-                                context,
-                                context.getString(R.string.error_internet),
-                                "error_internet"
-                            )
-                        }
+                    if (context.isNetworkAvailable()) {
+                        dialog?.dismiss()
+                    } else {
+                        dialog?.dismiss()
+                        show(
+                            context,
+                            context.getString(R.string.error_internet),
+                            TYPE_ERROR_INTERNET
+                        )
                     }
                 }
             }
         }
-
-        binding.btnClose.setOnClickListener {
-            dialog?.dismiss()
-        }
     }
 
     fun showErrorMessage(context: Context, message: String) {
-        show(context, message, "error")
+        show(context, message, TYPE_ERROR)
     }
 
     fun showSuccessMessage(context: Context, message: String) {
-        show(context, message, "success")
+        show(context, message, TYPE_SUCCESS)
     }
 
     fun showInfoMessage(context: Context, message: String) {
-        show(context, message, "info")
+        show(context, message, TYPE_INFO)
     }
 
     fun showWarningMessage(context: Context, message: String) {
-        show(context, message, "warning")
+        show(context, message, TYPE_WARNING)
     }
 
     fun showCustomMessageWithAction(
@@ -108,34 +107,34 @@ class MessageDialog {
         title: String,
         message: String,
         type: Int = 1,
-        action: String
+        twoButtons: Boolean = false,
+        textBtnClose: String? = null,
+        action: () -> Unit
     ) {
-        when (type) {
-            1 -> {
-                show(context, message, "error")
-                binding.btnAction.text = context.getString(R.string.reintentar)
-            }
-
-            2 -> {
-                show(context, message, "success")
-                binding.btnAction.text = context.getString(R.string.aceptar)
-            }
-
-            3 -> {
-                show(context, message, "warning")
-                binding.btnAction.text = context.getString(R.string.cancelar)
-            }
-
-            4 -> {
-                show(context, message, "info")
-                binding.btnAction.text = context.getString(R.string.continuar)
-            }
+        val typeString = when (type) {
+            1 -> TYPE_ERROR
+            2 -> TYPE_SUCCESS
+            3 -> TYPE_WARNING
+            4 -> TYPE_INFO
+            else -> TYPE_INFO
         }
+        show(context, message, typeString)
         binding.tvTitle.text = title
-        binding.btnAction.text = action
+
+        if (twoButtons) {
+            binding.btnClose.visibility = View.VISIBLE
+            binding.btnClose.text = textBtnClose ?: context.getString(R.string.volver)
+        } else {
+            binding.btnClose.visibility = View.GONE
+        }
+
+        binding.btnAction.setOnClickListener {
+            action()
+            dialog?.dismiss()
+        }
     }
 
     fun showInternetErrorMessage(context: Context) {
-        show(context, context.getString(R.string.error_internet), "error_internet")
+        show(context, context.getString(R.string.error_internet), TYPE_ERROR_INTERNET)
     }
 }

@@ -17,6 +17,7 @@
     <string name="cerrar">Cerrar</string>
     <string name="aceptar">Aceptar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="volver">Volver</string>
     <string name="continuar">Continuar</string>
 
     <!-- ALTS  -->
@@ -78,7 +79,6 @@
     <string name="modo_oscuro">Modo Oscuro</string>
     <string name="habilita_el_modo_oscuro">Habilita el modo oscuro</string>
     <string name="vibracion">Vibración</string>
-
 
     <!-- ****** Mensajes Genericos -->
 
