@@ -21,6 +21,9 @@
         android:theme="@style/Theme.PrimeraAPP"
         tools:targetApi="31">
         <activity
+            android:name="androidearly.utilities.dialogs.MessageDialog"
+            android:exported="false" />
+        <activity
             android:name="androidearly.utilities.dialogs.Dialog"
             android:exported="false" />
         <activity

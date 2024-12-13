@@ -1,73 +1,42 @@
 package androidearly.utilities.dialogs
 
-import android.os.Bundle
+import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.coco.primeraapp.R
 import com.coco.primeraapp.databinding.ActivityDialogBinding
 
-class LoadingDialog : DialogFragment() {
+class LoadingDialog {
 
-    private var _binding: ActivityDialogBinding? = null
-    private val binding get() = _binding!!
+    private var dialog: AlertDialog? = null
+    private lateinit var binding: ActivityDialogBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = ActivityDialogBinding.inflate(inflater, container, false)
-        val view = binding.root
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+    fun show(context: Context, message: String) {
+        // Verificar si ya hay un diálogo visible
+        if (dialog?.isShowing == true) {
+            return
         }
+
+        val builder = AlertDialog.Builder(context)
+        val inflater = LayoutInflater.from(context)
+        binding = ActivityDialogBinding.inflate(inflater)
+        val view = binding.root
+        builder.setView(view)
+        dialog = builder.create()
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent) // Hacer el fondo del diálogo transparente
 
         // Load the GIF using Glide
         val gifImageView = binding.gifImageView
-        Glide.with(this)
+        Glide.with(context)
             .load(R.drawable.loading) // Replace 'sample_gif' with your GIF file name
             .into(gifImageView)
+        binding.tvLoading.text = message
 
-        return view
+        dialog?.show()
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        dialog?.setCanceledOnTouchOutside(false)
-    }
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    companion object {
-        private const val TAG = "loadingDialog"
-
-        fun showLoadingDialog(activity: FragmentActivity) {
-            val fragmentManager = activity.supportFragmentManager
-            val prevFragment = fragmentManager.findFragmentByTag(TAG)
-            if (prevFragment != null) {
-                fragmentManager.beginTransaction().remove(prevFragment).commitAllowingStateLoss()
-            }
-            val loadingDialog = LoadingDialog()
-            loadingDialog.show(fragmentManager, TAG)
-        }
-
-        fun dismissLoadingDialog(activity: FragmentActivity) {
-            val fragmentManager = activity.supportFragmentManager
-            val loadingDialog = fragmentManager.findFragmentByTag(TAG) as? LoadingDialog
-            loadingDialog?.dismiss()
-        }
+    fun dismiss() {
+        dialog?.dismiss()
     }
 }

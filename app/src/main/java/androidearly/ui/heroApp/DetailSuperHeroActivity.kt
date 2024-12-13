@@ -6,7 +6,6 @@ import android.util.TypedValue
 import android.view.View
 import androidearly.ui.heroApp.data.SuperHeroDetailResponse
 import androidearly.utilities.notifications.showCustomToastNotification
-import androidearly.utilities.services.API.isNetworkAvailable
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -61,17 +60,15 @@ class DetailSuperHeroActivity : AppCompatActivity() {
     private fun searchByID(idSuperHero: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                if (isNetworkAvailable(this@DetailSuperHeroActivity)) {
-                    val service = retrofit.create(ApiService::class.java).getHeroesID(idSuperHero)
-                    Log.d(tag, service.toString())
-                    runOnUiThread {
-                        if (service.body() != null && service.isSuccessful) {
-                            Log.d(tag, "succes " + service.body().toString())
-                            setInfoToLayout(service.body()!!)
-                        } else {
-                            Log.e(tag, service.message())
-                            showCustomToastNotification("Error al cargar la información", 3)
-                        }
+                val service = retrofit.create(ApiService::class.java).getHeroesID(idSuperHero)
+                Log.d(tag, service.toString())
+                runOnUiThread {
+                    if (service.body() != null && service.isSuccessful) {
+                        Log.d(tag, "succes " + service.body().toString())
+                        setInfoToLayout(service.body()!!)
+                    } else {
+                        Log.e(tag, service.message())
+                        showCustomToastNotification("Error al cargar la información", 3)
                     }
                 }
             } catch (e: Exception) {

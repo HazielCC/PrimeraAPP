@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toast_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+
+    tools:gravity="center"
+    tools:background="@color/colorSecundary">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/button_card_parent"
+        android:id="@+id/cvToast"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/rlBorderColor"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true">
+            android:padding="10dp"
+            android:orientation="horizontal">
 
-            <!-- Add any other views or elements you want here -->
-            <FrameLayout
-                android:id="@+id/buttonAccentBorder"
-                android:layout_width="4dp"
-                android:layout_height="match_parent"
-                android:background="#3EAA56" />
+            <ImageView
+                android:id="@+id/toastIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/icon_toastmessage"
+                tools:src="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/toast_text"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="4dp"
-                android:padding="10dp"
-                android:textColor="#131313"
-                android:textSize="16sp"
-                tools:text="@string/todo_ejemplo" />
-        </RelativeLayout>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toastTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    tools:text="@string/titulo" />
+
+                <TextView
+                    android:id="@+id/tvLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    tools:text="Cuerpo como ejemplo" />
+            </LinearLayout>
+        </LinearLayout>
+
+
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -11,8 +11,8 @@ android {
         applicationId = "com.example.primeraapp"
         minSdk = 27
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.2"
+        versionCode = 4
+        versionName = "1.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -52,8 +52,9 @@ dependencies {
     implementation(libs.activity)
 
     // Consumo de servicios
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
+    implementation(libs.retrofit) // Retrofit
+    implementation(libs.logging.interceptor) // Interceptor
+    implementation(libs.converter.gson) // Gson
 
     // Dependencias de Testing
     testImplementation(libs.junit)

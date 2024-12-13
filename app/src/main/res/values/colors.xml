@@ -2,34 +2,39 @@
 <resources>
     <!-- ***************** Base colors *****************  -->
     <!-- Daylight -->
-    <color name="colorPrimary">#09a144</color>
-    <color name="colorPrimaryVariant">#6200EE</color>
-    <color name="colorSecundary">#6200EE</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryVariant">#f4f4f4</color>
+    <color name="colorSecundary">#86bbd8</color>
+    <color name="colorSecundaryVariant">#86bbd8</color>
+    <color name="background">#D2D6E2</color> <!--Color de fondo de la ventana -->
 
     <!-- Nigthly -->
-    <color name="colorPrimaryDark">#09a144</color>
-    <color name="colorPrimaryVariantDark">#6200EE</color>
-    <color name="colorSecundaryDark">#6200EE</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorPrimaryVariantDark">#2f2f2f</color>
+    <color name="colorSecundaryDark">#4C8252</color>
+    <color name="colorSecundaryVariantDark">#589b5e</color>
+    <color name="backgroundDark">#1e1f22</color> <!--Color de fondo de la ventana -->
 
-    <color name="purple_700">#FF3700B3</color>
+
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Color de fondo de la ventana -->
-    <color name="transparent">#00FFFFFF</color>
-    <color name="background">#1e1f22</color>
 
     <!-- Colores para los botones -->
     <color name="btnDisabled">#737373</color>
-    <color name="blue">#FF009774</color>
-    <color name="red">#FFD00000</color>
-    <color name="redTransparent">#1AD00000</color>
-    <color name="green">#FF388E3C</color>
-    <color name="greenTransparent">#1A09A144</color>
-    <color name="btnYellow">#FFFFEB3B</color>
-    <color name="yellowTransparent">#1AFFEB3B</color>
+    <color name="blue">#2f8cb2</color>
+    <color name="blueTransparent">#f4f8fe</color>
+
+    <color name="red">#dd3a2b</color>
+    <color name="redTransparent">#fef4f2</color>
+
+    <color name="green">#2eaa81</color>
+    <color name="greenTransparent">#f6fff9</color>
+
+    <color name="yellow">#fd9b04</color>
+    <color name="yellowTransparent">#f3ede3</color>
 
     <color name="btn">#6200EE</color>
     <color name="btnClick">#7C3BE1</color>
@@ -43,18 +48,12 @@
 
     <!-- Todo APP -->
     <color name="background_todo_app">#FF009774</color>
-    <color name="verde_bosque">#388E3C</color>
     <color name="azul_verde">#00796B</color>
     <color name="azul_celeste">#0288D1</color>
     <color name="trabajo">#455A64</color>
     <color name="ocio">#FFEB3B</color>
     <color name="pasatiempo">#8E24AA</color>
-    <color name="juegos">#FF5722</color>
     <color name="amistades">#4CAF50</color>
-
-    <!-- Colores para los Super Heroes -->
-    <color name="colorSuperHeroeMarvel">#FFD00000</color>
-    <color name="colorSuperHeroeDC">#FF0000D0</color>
 
     <!-- Tipos de poderes-->
     <color name="colorCombat">#FF4500</color> <!-- Naranja Rojo -->

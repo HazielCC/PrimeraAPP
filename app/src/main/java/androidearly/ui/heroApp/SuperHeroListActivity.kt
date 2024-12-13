@@ -2,24 +2,23 @@ package androidearly.ui.heroApp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidearly.ui.heroApp.DetailSuperHeroActivity.Companion.EXTRA_NAME
 import androidearly.ui.heroApp.adapter.SuperHeroAdapter
-import androidearly.utilities.dialogs.LoadingDialog.Companion.dismissLoadingDialog
-import androidearly.utilities.dialogs.LoadingDialog.Companion.showLoadingDialog
+import androidearly.utilities.dialogs.LoadingDialog
 import androidearly.utilities.notifications.showCustomToastNotification
+import androidearly.utilities.services.API.getRetrofit
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coco.primeraapp.R
 import com.coco.primeraapp.databinding.ActivitySuperHeroListBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class SuperHeroListActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySuperHeroListBinding
@@ -27,6 +26,7 @@ class SuperHeroListActivity : AppCompatActivity() {
     private val tag = "SuperHeroListActivity"
     private lateinit var adapter: SuperHeroAdapter
 
+    private var loadingDialog = LoadingDialog()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,19 +67,26 @@ class SuperHeroListActivity : AppCompatActivity() {
     }
 
     private fun searchByName(query: String) {
-        //binding.pbSuperHeroList.isVisible = true
-        showLoadingDialog(this@SuperHeroListActivity)
-        CoroutineScope(Dispatchers.IO).launch {
-            val service = retrofit.create(ApiService::class.java).getHeroes(query)
-            val response = service.body()
-            runOnUiThread {
-                dismissLoadingDialog(this@SuperHeroListActivity)
-                //binding.pbSuperHeroList.isVisible = false
-                if (response!!.superHeroList.isNotEmpty() && service.isSuccessful) {
-                    adapter.updateList(response.superHeroList)
+        lifecycleScope.launch {
+            try {
+                loadingDialog.show(this@SuperHeroListActivity, "Buscando...")
+                if (query.isNotEmpty()) {
+                    val service = retrofit.create(ApiService::class.java).getHeroes(query)
+                    val response = service.body()
+                    loadingDialog.dismiss()
+
+                    if (response!!.superHeroList.isNotEmpty() && service.isSuccessful) {
+                        adapter.updateList(response.superHeroList)
+                    } else {
+                        showCustomToastNotification("No se encontró informacion", 2)
+                    }
                 } else {
-                    showCustomToastNotification("No se encontró informacion", 3)
+                    showCustomToastNotification("Ingrese un nombre", 2)
                 }
+            } catch (e: Exception) {
+                loadingDialog.dismiss()
+                Log.e(tag, "Error: ${e.message}")
+                showCustomToastNotification("Error al buscar", 2)
             }
         }
     }
@@ -89,12 +96,4 @@ class SuperHeroListActivity : AppCompatActivity() {
         intent.putExtra(EXTRA_NAME, id)
         startActivity(intent)
     }
-
-    private fun getRetrofit(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://superheroapi.com/api/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
 }

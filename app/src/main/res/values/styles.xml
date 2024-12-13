@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!-- list_style.xml -->
 <resources>
-    <!-- Base application theme. -->
-    <style name="Base.Theme" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:statusBarColor">@color/colorPrimary</item>
-    </style>
-
     <!-- Spinner -->
     <style name="SpinnerStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
         <item name="android:textSize">20sp</item>
@@ -30,21 +23,28 @@
         <item name="android:maxHeight">100dp</item>
         <item name="android:maxWidth">100dp</item>
 
-
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="cornerRadius">10dp</item>
         <item name="android:padding">10dp</item>
     </style>
 
-    <!-- Estilo Edit Text -->
-    <style name="AppCompatEditTextStyle">
-        <item name="android:maxLines">1</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textColorHint">@color/white</item>
-        <item name="android:textSize">20sp</item>
+    <style name="MyCardsViews">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">3dp</item>
     </style>
 
+    <!-- Styles TextViews -->
+    <style name="MyTitleTextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingVertical">2.5dp</item>
+    </style>
 
+    <style name="MyBodyTextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">10dp</item>
+    </style>
 </resources>

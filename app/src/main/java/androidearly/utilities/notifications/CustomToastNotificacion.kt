@@ -3,10 +3,10 @@ package androidearly.utilities.notifications
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.FrameLayout
-import android.widget.RelativeLayout
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import com.coco.primeraapp.R
 
 
@@ -19,7 +19,7 @@ fun Toast.showCustomToast(context: Context, message: String) {
 
 
     // Encuentra el TextView en tu layout personalizado y asigna el mensaje
-    val textView = customToastView.findViewById<TextView>(R.id.toast_text)
+    val textView = customToastView.findViewById<TextView>(R.id.tvLoading)
     textView.text = message
 
     this.view = customToastView
@@ -30,7 +30,7 @@ fun Toast.showCustomToast(context: Context, message: String) {
 // Muestra un Toast personalizado con un mensaje y un color en el borde
 fun Context.showCustomToastNotification(
     message: String,
-    color: Int = R.color.colorPrimary,
+    color: Int = 0,
 ) {
     // Cancela el último Toast si aún se está mostrando
     lastToast?.cancel()
@@ -39,35 +39,51 @@ fun Context.showCustomToastNotification(
     val customToastView: View = inflater.inflate(R.layout.activity_custom_toast_notificacion, null)
 
     // Encuentra el TextView en tu layout personalizado y asigna el mensaje
-    val textView = customToastView.findViewById<TextView>(R.id.toast_text)
-    val buttonAccentBorder = customToastView.findViewById<FrameLayout>(R.id.buttonAccentBorder)
-    val rlBorderColor = customToastView.findViewById<RelativeLayout>(R.id.rlBorderColor)
+    val cvToast = customToastView.findViewById<CardView>(R.id.cvToast)
+    val toastText = customToastView.findViewById<TextView>(R.id.tvLoading)
+    val toastTitle = customToastView.findViewById<TextView>(R.id.toastTitle)
+    val toastIcon = customToastView.findViewById<ImageView>(R.id.toastIcon)
+
     if (message.isEmpty()) {
-        textView.text = "Error en el servicio"
+        toastText.text = getString(R.string.error_servicio)
     } else {
-        textView.text = message
+        toastText.text = message
     }
 
     when (color) {
+        // 0 -> Error
+        0 -> {
+            cvToast.setBackgroundResource(R.drawable.border_red)
+            toastTitle.text = getString(R.string.error)
+            toastIcon.setImageResource(R.drawable.ic_error)
+        }
+
+        // 1 -> Éxito
         1 -> {
-            buttonAccentBorder.setBackgroundResource(R.color.red)
-            rlBorderColor.setBackgroundResource(R.color.redTransparent)
+            cvToast.setBackgroundResource(R.drawable.border_green)
+            toastTitle.text = getString(R.string.exito)
+            toastIcon.setImageResource(R.drawable.ic_success)
         }
 
+        // 2 -> Advertencia
         2 -> {
-            buttonAccentBorder.setBackgroundResource(R.color.green)
-            rlBorderColor.setBackgroundResource(R.color.greenTransparent)
+            cvToast.setBackgroundResource(R.drawable.border_yellow)
+            toastTitle.text = getString(R.string.advertencia)
+            toastIcon.setImageResource(R.drawable.ic_warning)
         }
 
+        // 3 -> Información
         3 -> {
-            buttonAccentBorder.setBackgroundResource(R.color.btnYellow)
-            rlBorderColor.setBackgroundResource(R.color.yellowTransparent)
+            cvToast.setBackgroundResource(R.drawable.border_blue)
+            toastTitle.text = getString(R.string.informacion)
+            toastIcon.setImageResource(R.drawable.ic_information)
+
         }
     }
 
     val toast = Toast(this)
     toast.view = customToastView
-    toast.duration = Toast.LENGTH_SHORT
+    toast.duration = Toast.LENGTH_LONG
 
     // Guarda una referencia al Toast que acabas de crear
     lastToast = toast

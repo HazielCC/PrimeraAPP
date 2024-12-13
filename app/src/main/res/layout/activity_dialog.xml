@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toast_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+
+    tools:gravity="center"
+    tools:background="@color/colorSecundary">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/button_card_parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/cvToast"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
 
-        app:cardCornerRadius="16dp"
-        android:elevation="8dp"
+        style="@style/MyCardsViews"
 
-        android:layout_gravity="center"
-        android:backgroundTint="@color/white">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -32,17 +35,21 @@
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
 
+                android:layout_margin="10dp"
+
                 tools:src="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/toast_text"
+                android:id="@+id/tvLoading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textColor="#131313"
                 android:textSize="16sp"
-                android:text="@string/todo_ejemplo" />
+                tools:text="@string/todo_ejemplo" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-</androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
