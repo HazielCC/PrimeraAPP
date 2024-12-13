@@ -34,9 +34,9 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
-
                 android:layout_margin="10dp"
 
+                android:contentDescription="@string/icon_toastmessage"
                 tools:src="@tools:sample/avatars" />
 
             <TextView
@@ -46,7 +46,7 @@
                 android:padding="10dp"
                 android:textColor="#131313"
                 android:textSize="16sp"
-                tools:text="@string/todo_ejemplo" />
+                tools:text="Cargando..." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
