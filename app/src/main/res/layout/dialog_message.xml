@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
+        android:background="@color/colorPrimaryVariant"
         android:orientation="vertical">
 
         <ImageView
@@ -56,9 +57,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                tools:text="Cerrar"
+                tools:text="@string/volver"
                 android:layout_marginEnd="10dp"
-                style="@style/MyButtonStyle" />
+                style="@style/MyButtonStyle"
+                tools:backgroundTint="@color/blue" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnAction"
@@ -66,7 +68,8 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 tools:text="Aceptar"
-                style="@style/MyButtonStyle" />
+                style="@style/MyButtonStyle"
+                tools:backgroundTint="@color/green" />
 
         </LinearLayout>
 

@@ -40,7 +40,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="16sp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorOnPrimary"
                     tools:text="@string/titulo" />
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorOnPrimary"
                     tools:text="Cuerpo como ejemplo" />
             </LinearLayout>
         </LinearLayout>

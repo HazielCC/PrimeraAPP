@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ***************** Base colors *****************  -->
+    <!-- Daylight -->
+    <color name="background">#D2D6E2</color> <!--Color de fondo de la ventana -->
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryVariant">#f4f4f4</color>
+    <color name="colorSecundary">#86bbd8</color>
+    <color name="colorSecundaryVariant">#86bbd8</color>
+
+    <!-- Nigthly -->
+    <color name="backgroundDark">#212121</color> <!--Color de fondo de la ventana -->
+
+
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorPrimaryVariantDark">#2f2f2f</color>
+    <color name="colorSecundaryDark">#86bbd8</color>
+    <color name="colorSecundaryVariantDark">#86bbd8</color>
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores para los botones -->
+    <color name="btnDisabled">#737373</color>
+    <color name="blue">#2f8cb2</color>
+    <color name="blueTransparent">#f4f8fe</color>
+
+    <color name="red">#dd3a2b</color>
+    <color name="redTransparent">#fef4f2</color>
+
+    <color name="green">#2eaa81</color>
+    <color name="greenTransparent">#f6fff9</color>
+
+    <color name="yellow">#fd9b04</color>
+    <color name="yellowTransparent">#f3ede3</color>
+
+    <color name="btn">#6200EE</color>
+    <color name="btnClick">#7C3BE1</color>
+    <color name="cardDark">#271C3C</color>
+
+    <!-- Colores para los estados de peso -->
+    <color name="peso_insuficiente">#FFBB86FC</color> <!-- Púrpura Peso Insuficiente -->
+    <color name="peso_saludable">#FF03DAC5</color> <!-- Verde azulado para Peso Saludable -->
+    <color name="exceso_peso">#FFFFA500</color> <!-- Naranja para Exceso de Peso -->
+    <color name="estado_obesidad">#FFFF0000</color> <!-- Rojo para Estado de Obesidad -->
+
+    <!-- Todo APP -->
+    <color name="background_todo_app">#FF009774</color>
+    <color name="azul_verde">#00796B</color>
+    <color name="azul_celeste">#0288D1</color>
+    <color name="trabajo">#455A64</color>
+    <color name="ocio">#FFEB3B</color>
+    <color name="pasatiempo">#8E24AA</color>
+    <color name="amistades">#4CAF50</color>
+
+    <!-- Tipos de poderes-->
+    <color name="colorCombat">#FF4500</color> <!-- Naranja Rojo -->
+    <color name="colorDurability">#32CD32</color> <!-- Verde Lima -->
+    <color name="colorIntelligence">#1E90FF</color> <!-- Azul Dodger -->
+    <color name="colorPower">#FFD700</color> <!-- Oro -->
+    <color name="colorSpeed">#FF69B4</color> <!-- Rosa Caliente -->
+    <color name="colorStrength">#8B0000</color> <!-- Rojo Oscuro -->
+
+</resources>
