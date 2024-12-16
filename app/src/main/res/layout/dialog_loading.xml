@@ -29,17 +29,13 @@
             android:background="@color/colorPrimaryVariant"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/gifImageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:scaleType="fitCenter"
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_margin="10dp"
-
-                app:tint="@color/colorOnPrimary"
-                android:contentDescription="@string/icon_toastmessage"
-                tools:src="@drawable/ic_launcher_foreground" />
+                android:indeterminateTint="@color/white"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/tvLoading"

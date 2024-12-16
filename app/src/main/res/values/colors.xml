@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ***************** Base colors *****************  -->
-    <!-- Daylight -->
-    <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryVariant">#f4f4f4</color>
-    <color name="colorSecundary">#86bbd8</color>
-    <color name="colorSecundaryVariant">#86bbd8</color>
     <color name="background">#D2D6E2</color> <!--Color de fondo de la ventana -->
+    <!-- Daylight -->
+    <color name="colorPrimary">#6200ee</color>
+    <color name="colorPrimaryVariant">#3700b3</color>
+    <color name="colorOnPrimary">#0d0d0d</color>
 
-    <!-- Nigthly -->
-    <color name="colorPrimaryDark">#212121</color>
-    <color name="colorPrimaryVariantDark">#2f2f2f</color>
-    <color name="colorSecundaryDark">#4C8252</color>
-    <color name="colorSecundaryVariantDark">#589b5e</color>
-    <color name="backgroundDark">#1e1f22</color> <!--Color de fondo de la ventana -->
+    <color name="colorSecundary">#03dac6</color>
+    <color name="colorSecundaryVariant">#018786</color>
+    <color name="colorOnSecundary">#ffffff</color>
 
-
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
 
     <!-- Colores para los botones -->
     <color name="btnDisabled">#737373</color>
@@ -36,9 +27,7 @@
     <color name="yellow">#fd9b04</color>
     <color name="yellowTransparent">#f3ede3</color>
 
-    <color name="btn">#6200EE</color>
     <color name="btnClick">#7C3BE1</color>
-    <color name="cardDark">#271C3C</color>
 
     <!-- Colores para los estados de peso -->
     <color name="peso_insuficiente">#FFBB86FC</color> <!-- Púrpura Peso Insuficiente -->

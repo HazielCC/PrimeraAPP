@@ -45,15 +45,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
+                        style="@style/MyTitleTextView"
                         android:text="@string/modo_oscuro" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
+                        style="@style/MyBodyTextView"
                         android:text="@string/habilita_el_modo_oscuro" />
                 </LinearLayout>
 
@@ -62,6 +60,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp" />
+
+
             </LinearLayout>
             <!-- División -->
             <com.google.android.material.divider.MaterialDivider
@@ -88,10 +88,8 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:text="Bluetooth" />
+                    style="@style/MyTitleTextView"
+                    android:text="@string/bluetooth" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/switchBluetooth"
@@ -140,10 +138,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:text="Volumen" />
+                        style="@style/MyTitleTextView"
+                        android:text="@string/volumen" />
 
                     <com.google.android.material.slider.RangeSlider
                         android:id="@+id/rsVolumen"
@@ -153,8 +149,6 @@
                         android:valueFrom="0"
                         android:valueTo="100" />
                 </LinearLayout>
-
-
             </LinearLayout>
 
             <!-- Vibración -->
@@ -173,14 +167,11 @@
                     tools:tint="@color/azul_celeste"
                     android:src="@drawable/ic_vibration" />
 
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
+                    style="@style/MyTitleTextView"
                     android:text="@string/vibracion" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial

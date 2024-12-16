@@ -7,7 +7,7 @@
     android:background="@android:color/transparent"
 
     tools:gravity="center"
-    tools:background="@color/colorSecundary">
+    tools:background="@color/background">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvToast"
@@ -40,7 +40,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="16sp"
-                    android:textColor="@color/colorOnPrimary"
+                    android:textColor="@color/background"
                     tools:text="@string/titulo" />
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:textColor="@color/colorOnPrimary"
+                    android:textColor="@color/background"
                     tools:text="Cuerpo como ejemplo" />
             </LinearLayout>
         </LinearLayout>

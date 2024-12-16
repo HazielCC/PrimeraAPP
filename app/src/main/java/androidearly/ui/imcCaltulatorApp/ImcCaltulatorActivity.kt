@@ -133,7 +133,7 @@ class ImcCaltulatorActivity : AppCompatActivity() {
         val colorSelected = if (isSelectedComponent) {
             R.color.btnClick
         } else {
-            R.color.btn
+            R.color.colorPrimary
         }
         return ContextCompat.getColor(this, colorSelected)
     }

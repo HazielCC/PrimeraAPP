@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:scaleType="centerCrop"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_foreground"
-        tools:tint="@color/azul_celeste" />
+
+        tools:src="@tools:sample/avatars" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -24,13 +25,15 @@
         android:layout_height="0dp"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="-20dp"
+
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
+        android:background="@color/colorSecundary"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:backgroundTint="@color/azul_celeste">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,26 +45,31 @@
                 android:id="@+id/tvSuperHeroeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+                style="@style/MyTitleTextView"
                 android:layout_gravity="center"
                 android:textSize="28sp"
-                android:textStyle="bold"
+
                 tools:text="Soy un Super Heroe" />
 
             <TextView
                 android:id="@+id/tvSuperHeroePublisher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+                style="@style/MyBodyTextView"
                 android:layout_gravity="center"
                 android:textSize="18sp"
+
                 tools:text="Marvel" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Descripción"
 
-                android:textSize="18sp" />
+                style="@style/MyBodyTextView"
+                android:layout_marginTop="20dp"
+                android:text="Descripción" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

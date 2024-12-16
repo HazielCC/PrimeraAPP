@@ -66,7 +66,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="32dp"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/btn"
+        app:backgroundTint="@color/colorPrimary"
         app:elevation="5dp"
         app:fabSize="normal"
         app:tint="@color/white" />

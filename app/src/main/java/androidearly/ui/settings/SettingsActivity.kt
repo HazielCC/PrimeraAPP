@@ -130,4 +130,9 @@ class SettingsActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         delegate.applyDayNight()
     }
+
+    private fun isAutomaticDarkMode() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        delegate.applyDayNight()
+    }
 }

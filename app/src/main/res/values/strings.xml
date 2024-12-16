@@ -9,7 +9,6 @@
 
 
     <!-- Mensaje emergente -->
-    <string name="success">success</string>
     <string name="error_internet">No tienes conexión a Internet</string>
 
     <!-- Botones -->
@@ -79,6 +78,8 @@
     <string name="modo_oscuro">Modo Oscuro</string>
     <string name="habilita_el_modo_oscuro">Habilita el modo oscuro</string>
     <string name="vibracion">Vibración</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="volumen">Volumen</string>
 
     <!-- ****** Mensajes Genericos -->
 

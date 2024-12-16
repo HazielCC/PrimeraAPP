@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import androidearly.utilities.services.API.isNetworkAvailable
 import com.coco.primeraapp.R
-import com.coco.primeraapp.databinding.ActivityMessageDialogBinding
+import com.coco.primeraapp.databinding.DialogMessageBinding
 
 class MessageDialog {
-    private lateinit var binding: ActivityMessageDialogBinding
+    private lateinit var binding: DialogMessageBinding
     private var dialog: AlertDialog? = null
 
     companion object {
@@ -25,7 +25,7 @@ class MessageDialog {
 
         val builder = AlertDialog.Builder(context)
         val inflater = LayoutInflater.from(context)
-        binding = ActivityMessageDialogBinding.inflate(inflater)
+        binding = DialogMessageBinding.inflate(inflater)
         builder.setView(binding.root)
         dialog = builder.create()
         dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)

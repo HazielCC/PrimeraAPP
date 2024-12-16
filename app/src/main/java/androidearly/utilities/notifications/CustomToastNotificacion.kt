@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.widget.Toast
 import com.coco.primeraapp.R
-import com.coco.primeraapp.databinding.ActivityCustomToastNotificacionBinding
+import com.coco.primeraapp.databinding.ToastCustomBinding
 
 private var lastToast: Toast? = null
 
@@ -15,7 +15,7 @@ fun Context.showCustomToastNotification(
     lastToast?.cancel()
 
     val inflater = LayoutInflater.from(this)
-    val binding = ActivityCustomToastNotificacionBinding.inflate(inflater)
+    val binding = ToastCustomBinding.inflate(inflater)
 
     if (message.isEmpty()) {
         binding.tvLoading.text = getString(R.string.error_servicio)
@@ -28,6 +28,7 @@ fun Context.showCustomToastNotification(
             binding.cvToast.setBackgroundResource(R.drawable.border_red)
             binding.toastTitle.text = getString(R.string.error)
             binding.toastIcon.setImageResource(R.drawable.ic_error)
+
         }
 
         1 -> {
