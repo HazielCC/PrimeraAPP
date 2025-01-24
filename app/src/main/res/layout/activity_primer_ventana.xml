@@ -15,7 +15,7 @@
         android:layout_height="50dp"
         android:inputType="text"
         android:hint="@string/ingresa_tu_nombre"
-        android:textColor="@color/colorOnPrimary"
+        android:textColor="@color/textColor"
         app:layout_constraintBottom_toTopOf="@+id/btnADD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

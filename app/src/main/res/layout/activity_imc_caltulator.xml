@@ -5,31 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:paddingHorizontal="16dp"
     android:paddingVertical="15dp"
-    tools:context="androidearly.primeraApp.imcCaltulator.ImcCaltulatorActivity">
+    tools:context="androidearly.ui.imcCaltulatorApp.ImcCaltulatorActivity">
+
+    <TextView
+        android:id="@+id/tvGender"
+        style="@style/MyTitleTextView"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:paddingVertical="8dp"
+        android:text="Genero"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/cvMale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- tarjeta de Hombre  -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvMale"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="16dp"
+
         app:layout_constraintEnd_toStartOf="@+id/cvFamale"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tvGender">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="8dp">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"
                 android:src="@drawable/ic_male"
                 android:tint="@color/white" />
 
@@ -37,8 +58,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/masculino"
-                android:textAllCaps="true"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -48,23 +70,27 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvFamale"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_weight="1"
         app:cardBackgroundColor="@color/btnClick"
         app:cardCornerRadius="16dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cvMale"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tvGender">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="8dp">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"
                 android:src="@drawable/ic_famale"
                 android:tint="@color/white" />
 
@@ -72,23 +98,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/femenino"
-                android:textAllCaps="true"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
         </LinearLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cvAltura"
-        android:layout_width="0dp"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHeight"
+        style="@style/MyTitleTextView"
+        android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:cardBackgroundColor="@color/colorPrimaryVariant"
-        app:cardCornerRadius="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/altura"
+        android:textColor="@color/colorPrimary"
+
+        android:textSize="20sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvMale">
+        app:layout_constraintTop_toBottomOf="@+id/cvMale" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvAltura"
+        style="@style/MyCardsViews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardBackgroundColor="@color/onBackground"
+        app:cardCornerRadius="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeight">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -97,20 +142,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/altura"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvAltura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_120_cm"
-                android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <com.google.android.material.slider.RangeSlider
@@ -125,17 +164,34 @@
     </com.google.android.material.card.MaterialCardView>
 
 
+    <TextView
+        android:id="@+id/tvWeight"
+        style="@style/MyTitleTextView"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:text="@string/peso"
+        android:textColor="@color/colorPrimary"
+
+
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/cvPeso"
+        app:layout_constraintStart_toStartOf="@+id/cvPeso"
+        app:layout_constraintTop_toBottomOf="@+id/cvAltura" />
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvPeso"
+        style="@style/MyCardsViews"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
-        app:cardBackgroundColor="@color/colorPrimaryVariant"
-        app:cardCornerRadius="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardBackgroundColor="@color/onBackground"
+
         app:layout_constraintEnd_toStartOf="@+id/cvEdad"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvAltura">
+        app:layout_constraintTop_toBottomOf="@+id/tvWeight">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,20 +200,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/peso"
-                android:textAllCaps="true"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tvPeso"
+                android:id="@+id/tvInputWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_35_kg"
-                android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -170,26 +218,26 @@
 
                 <ImageButton
                     android:id="@+id/ibMenos"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
                     android:backgroundTint="@android:color/transparent"
 
                     android:contentDescription="@string/menos_peso"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_menos"
-                    app:tint="@color/white" />
+                    app:tint="@color/textColor" />
 
                 <ImageButton
                     android:id="@+id/ibMas"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@android:color/transparent"
                     android:contentDescription="@string/aumentar_peso"
                     android:scaleType="fitCenter"
-                    android:backgroundTint="@android:color/transparent"
 
                     android:src="@drawable/ic_mas"
-                    app:tint="@color/white" />
+                    app:tint="@color/textColor" />
 
 
             </LinearLayout>
@@ -198,11 +246,29 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
+    <TextView
+        style="@style/MyTitleTextView"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:text="@string/edad"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cvEdad"
+        app:layout_constraintTop_toBottomOf="@+id/cvAltura" />
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvEdad"
+        style="@style/MyCardsViews"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        app:cardBackgroundColor="@color/colorPrimaryVariant"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/onBackground"
         app:cardCornerRadius="16dp"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -216,20 +282,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/edad"
-                android:textAllCaps="true"
-                android:textColor="@color/white" />
-
-            <TextView
                 android:id="@+id/tvEdad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_23_a_os"
-                android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -241,41 +299,58 @@
 
                 <ImageButton
                     android:id="@+id/ibMenosEdad"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
-                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
                     android:contentDescription="@string/disminuir_edad"
+
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_menos"
-                    app:tint="@color/white" />
+                    app:tint="@color/textColor" />
 
                 <ImageButton
                     android:id="@+id/ibMasEdad"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:background="@android:color/transparent"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@android:color/transparent"
                     android:contentDescription="@string/aumentar_edad"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mas"
-                    app:tint="@color/white" />
+                    app:tint="@color/textColor" />
             </LinearLayout>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+
+    <!-- Botón de calculas -->
+    <ImageButton
+        android:id="@+id/btnVolver"
+        style="@style/MyButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/onBackground"
+        android:contentDescription="asdasdsad"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:text="@string/volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/colorPrimary" />
     <!-- Botón de calculas -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btCalcular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
         style="@style/MyButtonStyle"
+        android:layout_width="wrap_content"
 
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:text="@string/calcular_masa_corporal"
-
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
