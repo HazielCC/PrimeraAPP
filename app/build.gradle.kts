@@ -42,6 +42,7 @@ android {
 }
 
 dependencies {
+    // Dependencias de Kotlin
     implementation(libs.material.spinner)
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
