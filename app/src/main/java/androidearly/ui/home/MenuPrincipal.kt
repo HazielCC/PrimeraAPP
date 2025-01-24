@@ -3,7 +3,7 @@ package androidearly.ui.home
 import android.content.Intent
 import android.os.Bundle
 import androidearly.primeraApp.fotosApp.FotosActivity
-import androidearly.primeraApp.imcCaltulator.ImcCaltulatorActivity
+import androidearly.ui.imcCaltulatorApp.ImcCaltulatorActivity
 import androidearly.primeraApp.todoApp.TodoActivity
 import androidearly.ui.heroApp.SuperHeroListActivity
 import androidearly.ui.settings.SettingsActivity

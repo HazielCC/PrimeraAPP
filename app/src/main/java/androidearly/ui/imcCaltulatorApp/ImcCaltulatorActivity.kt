@@ -1,9 +1,10 @@
-package androidearly.primeraApp.imcCaltulator
+package androidearly.ui.imcCaltulatorApp
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidearly.primeraApp.imcCaltulator.ResultActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.coco.primeraapp.R
@@ -51,6 +52,11 @@ class ImcCaltulatorActivity : AppCompatActivity() {
     // Inicialización de Variables
     @SuppressLint("SetTextI18n")
     private fun setListeners() {
+        // Cerrar ventana
+        binding.btnVolver.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+        
         // Botón Mujer que hace referencia a la tarjeta de mujer
         binding.cvFamale.setOnClickListener {
             Log.d(tag, "Famale card clicked")
@@ -115,7 +121,7 @@ class ImcCaltulatorActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun actualizarPeso() {
-        binding.tvPeso.text = "$peso kg"
+        binding.tvInputWeight.text = "$peso kg"
     }
 
     private fun changeColor() {
