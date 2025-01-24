@@ -5,7 +5,7 @@
     <!-- Nigthly -->
     <color name="colorPrimary">#6200ee</color>
     <color name="colorPrimaryVariant">#3700b3</color>
-    <color name="colorOnPrimary">#0d0d0d</color>
+    <color name="textColor">#0d0d0d</color>
 
     <!-- Color Secundary -->
     <color name="colorSecundary">#1f1f1f</color>

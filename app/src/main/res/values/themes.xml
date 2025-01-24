@@ -8,11 +8,11 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/colorSecundary</item>
         <item name="colorSecondaryVariant">@color/colorSecundaryVariant</item>
-        <item name="colorOnSecondary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/textColor</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!--Text Color-->
-        <item name="android:textColorPrimary">@color/colorOnPrimary</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
 
         <item name="background">@color/background</item>
     </style>
@@ -27,10 +27,10 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/colorSecundary</item>
         <item name="colorSecondaryVariant">@color/colorSecundaryVariant</item>
-        <item name="colorOnSecondary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/textColor</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/colorOnPrimary</item>
+        <item name="android:statusBarColor">@color/textColor</item>
         <!-- Customize your theme here. -->
 
         <!--Text Color-->

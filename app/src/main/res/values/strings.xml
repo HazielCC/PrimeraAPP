@@ -28,7 +28,7 @@
     <string name="ingresa_tu_nombre">ingresa_tu_nombre</string>
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
-    <string name="calcular_masa_corporal">Calcular Masa Corporal</string>
+    <string name="calcular_masa_corporal">Calcular</string>
     <string name="resultado">Resultado</string>
     <string name="volver_a_calcular">Volver a Calcular</string>
     <string name="error">error</string>
