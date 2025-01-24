@@ -42,7 +42,6 @@ android {
 }
 
 dependencies {
-    /* Una dependencia */
     // Dependencias de Kotlin
     implementation(libs.material.spinner)
     implementation(libs.core.ktx)
