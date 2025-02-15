@@ -22,7 +22,6 @@ import retrofit2.Retrofit
 
 class SuperHeroListActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySuperHeroListBinding
-    private val tag = "SuperHeroListActivity"
     private lateinit var adapter: SuperHeroAdapter
 
     // Utilities
