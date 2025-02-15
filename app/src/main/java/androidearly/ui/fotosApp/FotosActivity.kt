@@ -1,4 +1,4 @@
-package androidearly.primeraApp.fotosApp
+package androidearly.ui.fotosApp
 
 import android.Manifest
 import android.content.Intent
@@ -16,8 +16,8 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
-import androidearly.primeraApp.fotosApp.vml.CameraViewModel
-import androidearly.primeraApp.fotosApp.vml.PictureClass
+import androidearly.ui.fotosApp.adapter.CameraViewModel
+import androidearly.ui.fotosApp.adapter.PictureClass
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts

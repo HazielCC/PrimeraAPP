@@ -41,7 +41,7 @@
         </provider>
 
         <activity
-            android:name="androidearly.primeraApp.fotosApp.FotosActivity"
+            android:name="androidearly.ui.fotosApp.FotosActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />

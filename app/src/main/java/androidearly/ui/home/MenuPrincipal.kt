@@ -2,10 +2,10 @@ package androidearly.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import androidearly.primeraApp.fotosApp.FotosActivity
-import androidearly.ui.imcCaltulatorApp.ImcCaltulatorActivity
 import androidearly.primeraApp.todoApp.TodoActivity
+import androidearly.ui.fotosApp.FotosActivity
 import androidearly.ui.heroApp.SuperHeroListActivity
+import androidearly.ui.imcCaltulatorApp.ImcCaltulatorActivity
 import androidearly.ui.settings.SettingsActivity
 import androidx.appcompat.app.AppCompatActivity
 import com.coco.primeraapp.databinding.ActivitySegundaVentanaBinding
@@ -16,7 +16,7 @@ class MenuPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySegundaVentanaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         setListeners()
     }
 
